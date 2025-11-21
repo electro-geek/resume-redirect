@@ -1,0 +1,37 @@
+.skills-section {
+    margin-bottom: var(--space-xl);
+    animation-delay: 0.3s;
+}
+
+.skills-output {
+    margin: var(--space-md) 0;
+}
+
+.output-line {
+    margin-bottom: var(--space-sm);
+    font-size: 0.9rem;
+}
+
+.skill-category-block {
+    margin-bottom: var(--space-lg);
+}
+
+.category-header {
+    margin-bottom: var(--space-sm);
+    font-size: 0.9rem;
+}
+
+.skill-list {
+    padding-left: var(--space-lg);
+}
+
+.skill-item {
+    margin-bottom: var(--space-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.skill-item .text-green {
+    font-size: 0.85rem;
+}

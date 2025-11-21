@@ -1,0 +1,114 @@
+.experience-section {
+    margin-bottom: var(--space-xl);
+}
+
+.tech-stack-banner {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md);
+    background: rgba(0, 217, 255, 0.05);
+    border: 1px solid var(--color-cyan);
+    border-radius: 4px;
+    overflow-x: auto;
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.tech-stack-banner .ascii-art-small {
+    text-align: center;
+}
+
+.experience-entry {
+    margin: var(--space-xl) 0;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.company-ascii {
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm);
+    background: rgba(189, 147, 249, 0.05);
+    border-left: 3px solid var(--color-purple);
+    overflow-x: auto;
+}
+
+.exp-header {
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.exp-summary {
+    margin: var(--space-sm) 0;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.exp-highlights {
+    margin: var(--space-md) 0;
+}
+
+.highlight-line {
+    margin-bottom: var(--space-xs);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: lineAppear 0.5s ease-out forwards;
+}
+
+@keyframes lineAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.exp-separator {
+    margin: var(--space-lg) 0;
+    opacity: 0.3;
+}
+
+.log-footer {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-bg-tertiary);
+}
+
+@media (max-width: 768px) {
+
+    .tech-stack-banner .ascii-art-small,
+    .company-ascii .ascii-art-small {
+        font-size: 0.3rem;
+    }
+}

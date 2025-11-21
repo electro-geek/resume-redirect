@@ -1,0 +1,38 @@
+.header {
+    margin-bottom: var(--space-lg);
+}
+
+.header-info {
+    margin: var(--space-lg) 0;
+}
+
+.info-line {
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+}
+
+.contact-info {
+    margin-top: var(--space-md);
+}
+
+.json-line {
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-mono);
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
