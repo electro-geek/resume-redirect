@@ -3,6 +3,7 @@ import Loader from './components/Loader';
 import Header from './components/Header';
 import Summary from './components/Summary';
 import Skills from './components/Skills';
+import Stats from './components/Stats';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
@@ -40,18 +41,22 @@ function App() {
         </div>
 
         <div className="section-wrapper" style={{ animationDelay: '0.7s' }}>
-          <Experience />
+          <Stats />
         </div>
 
         <div className="section-wrapper" style={{ animationDelay: '0.9s' }}>
-          <Projects />
+          <Experience />
         </div>
 
         <div className="section-wrapper" style={{ animationDelay: '1.1s' }}>
+          <Projects />
+        </div>
+
+        <div className="section-wrapper" style={{ animationDelay: '1.3s' }}>
           <Education />
         </div>
 
-        <footer className="footer terminal-window section-wrapper" style={{ animationDelay: '1.3s' }}>
+        <footer className="footer terminal-window section-wrapper" style={{ animationDelay: '1.5s' }}>
           <div className="terminal-header">
             <div className="terminal-buttons">
               <div className="terminal-button close"></div>
