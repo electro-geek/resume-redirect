@@ -3,45 +3,24 @@ import './Skills.css';
 
 const skillsData = [
     {
-        category: 'Web Development',
-        skills: ['Python', 'C/C++', 'JAVA', 'Flask', 'Django'],
-        ascii: `
-    ____        __  __              
-   / __ \\__  __/ /_/ /_  ____  ____ 
-  / /_/ / / / / __/ __ \\/ __ \\/ __ \\
- / ____/ /_/ / /_/ / / / /_/ / / / /
-/_/    \\__, /\\__/_/ /_/\\____/_/ /_/ 
-      /____/                        `
+        category: 'Core Engineering',
+        skills: ['Python', 'Golang', 'JavaScript', 'C/C++', 'System Design'],
     },
     {
-        category: 'Machine Learning',
-        skills: ['Tensorflow', 'PyTorch'],
-        ascii: `
-    ___    ____
-   /   |  /  _/
-  / /| |  / /  
- / ___ |_/ /   
-/_/  |_/___/   `
+        category: 'Backend Architectures',
+        skills: ['FastAPI', 'Django', 'Flask', 'Node.js', 'WebSockets', 'gRPC'],
     },
     {
-        category: 'DevOps & APIs',
-        skills: ['Git', 'Docker', 'Kubernetes', 'Postman'],
-        ascii: `
-    ____             __            
-   / __ \\____  _____/ /_____  _____
-  / / / / __ \\/ ___/ //_/ _ \\/ ___/
- / /_/ / /_/ / /__/ ,< /  __/ /    
-/_____/\\____/\\___/_/|_|\\___/_/     `
+        category: 'Infrastucture & DevOps',
+        skills: ['Docker', 'Kubernetes', 'AWS', 'Terraform', 'CI/CD Pipelines'],
     },
     {
-        category: 'Databases',
-        skills: ['MySQL', 'PostgreSQL', 'MongoDB'],
-        ascii: `
-    ____  ____ 
-   / __ \\/ __ )
-  / / / / __  |
- / /_/ / /_/ / 
-/_____/_____/  `
+        category: 'Database & Caching',
+        skills: ['PostgreSQL', 'Redis', 'MongoDB', 'Elasticsearch', 'DynamoDB'],
+    },
+    {
+        category: 'AI & Data Processing',
+        skills: ['Tensorflow', 'PyTorch', 'Celery', 'RabbitMQ', 'Apache Kafka'],
     }
 ];
 
@@ -54,60 +33,24 @@ const Skills = () => {
                     <div className="terminal-button minimize"></div>
                     <div className="terminal-button maximize"></div>
                 </div>
-                <div className="terminal-title">skills.sh</div>
+                <div className="terminal-title">capabilities.json</div>
             </div>
 
             <div className="terminal-content">
-                <div className="command-line">
-                    <span className="prompt">mritunjay@portfolio</span>
-                    <span className="text-white">$</span>
-                    <span className="command"> ls -la ~/skills/</span>
-                </div>
-
-                <div className="skills-output">
-                    <div className="output-line text-gray">
-                        total {skillsData.reduce((acc, cat) => acc + cat.skills.length, 0)} skills
-                    </div>
-
+                <div className="section-title">Technical Expertise</div>
+                <div className="skills-grid">
                     {skillsData.map((category, index) => (
-                        <div
-                            key={index}
-                            className="skill-category-block"
-                            style={{ animationDelay: `${index * 0.2}s` }}
-                        >
-                            <div className="ascii-art-small">
-                                {category.ascii}
-                            </div>
-                            <div className="category-header">
-                                <span className="text-cyan">drwxr-xr-x</span>
-                                <span className="text-white"> {category.skills.length} mritunjay staff </span>
-                                <span className="text-yellow">{category.category}/</span>
-                            </div>
-                            <div className="skill-list">
+                        <div key={index} className="skill-card">
+                            <h3>{category.category}</h3>
+                            <div className="skill-tags">
                                 {category.skills.map((skill, skillIndex) => (
-                                    <div
-                                        key={skillIndex}
-                                        className="skill-item"
-                                        style={{ animationDelay: `${index * 0.2 + skillIndex * 0.1}s` }}
-                                    >
-                                        <span className="text-green">├──</span>
-                                        <span className="terminal-tag">{skill}</span>
-                                    </div>
+                                    <span key={skillIndex} className="skill-tag">
+                                        {skill}
+                                    </span>
                                 ))}
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="command-line" style={{ marginTop: '1rem' }}>
-                    <span className="prompt">mritunjay@portfolio</span>
-                    <span className="text-white">$</span>
-                    <span className="command"> echo "Total expertise loaded"</span>
-                </div>
-                <div className="output-line">
-                    <span className="text-green">Total expertise loaded</span>
-                    <span className="text-green"> ✓</span>
-                    <span className="pulse-dot" style={{ marginLeft: '10px' }}></span>
                 </div>
             </div>
         </section>
@@ -115,3 +58,4 @@ const Skills = () => {
 };
 
 export default Skills;
+

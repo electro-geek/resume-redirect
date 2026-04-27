@@ -1,114 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Header.css';
 
 const Header = () => {
-  const [showCursor, setShowCursor] = useState(true);
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 530);
-
-    return () => clearInterval(cursorInterval);
-  }, []);
-
   return (
-    <header className="header terminal-window fade-in">
+    <header className="header terminal-window">
       <div className="terminal-header">
         <div className="terminal-buttons">
           <div className="terminal-button close"></div>
           <div className="terminal-button minimize"></div>
           <div className="terminal-button maximize"></div>
         </div>
-        <div className="terminal-title">mritunjay@portfolio:~$</div>
+        <div className="terminal-title">system.profile</div>
       </div>
 
       <div className="terminal-content">
-        {/* ASCII Art */}
-        <div className="ascii-art">
-          {`
-███╗   ███╗██████╗ ██╗████████╗██╗   ██╗███╗   ██╗     ██╗ █████╗ ██╗   ██╗
-████╗ ████║██╔══██╗██║╚══██╔══╝██║   ██║████╗  ██║     ██║██╔══██╗╚██╗ ██╔╝
-██╔████╔██║██████╔╝██║   ██║   ██║   ██║██╔██╗ ██║     ██║███████║ ╚████╔╝ 
-██║╚██╔╝██║██╔══██╗██║   ██║   ██║   ██║██║╚██╗██║██   ██║██╔══██║  ╚██╔╝  
-██║ ╚═╝ ██║██║  ██║██║   ██║   ╚██████╔╝██║ ╚████║╚█████╔╝██║  ██║   ██║   
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝ ╚════╝ ╚═╝  ╚═╝   ╚═╝   
-`}
-        </div>
-
-        <div className="command-line">
-          <span className="prompt">mritunjay@portfolio</span>
-          <span className="text-white">$</span>
-          <span className="command"> whoami</span>
+        <div className="header-hero">
+          <div className="section-title">Developer Identity</div>
+          <h1>Mritunjay Sharma</h1>
+          <p className="text-secondary" style={{ fontSize: '1.2rem', maxWidth: '600px' }}>
+            Building scalable backend architectures and high-performance systems.
+          </p>
         </div>
 
         <div className="header-info">
-          <div className="info-line">
-            <span className="text-cyan">Name:</span>
-            <span className="text-white"> Mritunjay Sharma</span>
+          <div className="info-item">
+            <span className="info-label">Role</span>
+            <span className="info-value">Backend Engineer</span>
           </div>
-          <div className="info-line">
-            <span className="text-cyan">Role:</span>
-            <span className="text-yellow"> Backend Engineer</span>
+          <div className="info-item">
+            <span className="info-label">Experience</span>
+            <span className="info-value">1.5+ Years Exp.</span>
           </div>
-          <div className="info-line">
-            <span className="text-cyan">Location:</span>
-            <span className="text-white"> Rajasthan, India</span>
+          <div className="info-item">
+            <span className="info-label">Location</span>
+            <span className="info-value">Rajasthan, India</span>
           </div>
-          <div className="info-line">
-            <span className="text-cyan">Status:</span>
-            <span className="text-green"> Available for opportunities{showCursor && <span className="cursor"></span>}</span>
+          <div className="info-item">
+            <span className="info-label">Status</span>
+            <span className="info-value" style={{ color: 'var(--accent-primary)' }}>● Available</span>
           </div>
         </div>
 
-        <div className="command-line" style={{ marginTop: '1.5rem' }}>
-          <span className="prompt">mritunjay@portfolio</span>
-          <span className="text-white">$</span>
-          <span className="command"> cat contact.json</span>
-        </div>
-
-        <div className="contact-info">
-          <div className="json-line">{'{'}</div>
-          <div className="json-line">
-            <span className="text-purple">  "email"</span>
-            <span className="text-white">: </span>
-            <span className="text-yellow">"</span>
-            <a href="mailto:mritunjaypandey0789@gmail.com">mritunjaypandey0789@gmail.com</a>
-            <span className="text-yellow">"</span>
-            <span className="text-white">,</span>
-          </div>
-          <div className="json-line">
-            <span className="text-purple">  "phone"</span>
-            <span className="text-white">: </span>
-            <span className="text-yellow">"</span>
-            <a href="tel:+916378768400">+91 6378768400</a>
-            <span className="text-yellow">"</span>
-            <span className="text-white">,</span>
-          </div>
-          <div className="json-line">
-            <span className="text-purple">  "portfolio"</span>
-            <span className="text-white">: </span>
-            <span className="text-yellow">"</span>
-            <a href="https://electro-geek.github.io/MP/" target="_blank" rel="noreferrer">electro-geek.github.io/MP</a>
-            <span className="text-yellow">"</span>
-            <span className="text-white">,</span>
-          </div>
-          <div className="json-line">
-            <span className="text-purple">  "github"</span>
-            <span className="text-white">: </span>
-            <span className="text-yellow">"</span>
-            <a href="https://github.com/electro-geek" target="_blank" rel="noreferrer">github.com/electro-geek</a>
-            <span className="text-yellow">"</span>
-            <span className="text-white">,</span>
-          </div>
-          <div className="json-line">
-            <span className="text-purple">  "linkedin"</span>
-            <span className="text-white">: </span>
-            <span className="text-yellow">"</span>
-            <a href="https://linkedin.com/in/electro-geek" target="_blank" rel="noreferrer">linkedin.com/in/electro-geek</a>
-            <span className="text-yellow">"</span>
-          </div>
-          <div className="json-line">{'}'}</div>
+        <div className="section-title" style={{ marginTop: '2.5rem' }}>Contact Channels</div>
+        <div className="contact-grid">
+          <a href="mailto:mritunjaypandey0789@gmail.com" className="contact-link">
+             <span style={{ color: 'var(--accent-primary)' }}>&gt;</span>
+             <span>mritunjaypandey0789@gmail.com</span>
+          </a>
+          <a href="tel:+916378768400" className="contact-link">
+             <span style={{ color: 'var(--accent-primary)' }}>&gt;</span>
+             <span>+91 6378768400</span>
+          </a>
+          <a href="https://github.com/electro-geek" target="_blank" rel="noreferrer" className="contact-link">
+             <span style={{ color: 'var(--accent-primary)' }}>&gt;</span>
+             <span>github/electro-geek</span>
+          </a>
+          <a href="https://linkedin.com/in/electro-geek" target="_blank" rel="noreferrer" className="contact-link">
+             <span style={{ color: 'var(--accent-primary)' }}>&gt;</span>
+             <span>linkedin/electro-geek</span>
+          </a>
         </div>
       </div>
     </header>
@@ -116,3 +66,4 @@ const Header = () => {
 };
 
 export default Header;
+

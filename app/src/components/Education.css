@@ -1,29 +1,54 @@
-.education-section {
-    margin-bottom: var(--space-xl);
-    animation-delay: 0.6s;
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.json-section {
-    margin: var(--space-lg) 0;
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-.json-object {
-    margin: var(--space-sm) 0;
+.edu-card {
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: var(--transition-smooth);
 }
 
-.json-line {
-    line-height: 1.8;
-    font-size: 0.9rem;
+.edu-card:hover {
+    border-color: var(--accent-primary);
+    background: rgba(16, 185, 129, 0.03);
 }
 
-.indent-1 {
-    padding-left: var(--space-lg);
+.edu-card h4 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
 }
 
-.indent-2 {
-    padding-left: calc(var(--space-lg) * 2);
+.edu-meta {
+    font-size: 0.85rem;
+    color: var(--accent-secondary);
+    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
 }
 
-.indent-3 {
-    padding-left: calc(var(--space-lg) * 3);
+.edu-sub {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+.pub-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.pub-item {
+    padding: 1rem;
+    border-left: 2px solid var(--accent-primary);
+    background: rgba(255, 255, 255, 0.01);
 }

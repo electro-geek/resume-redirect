@@ -3,169 +3,103 @@ import './Projects.css';
 
 const projectsData = [
     {
-        name: 'Stock Price Prediction Model',
-        startDate: 'Jan 2022',
-        endDate: 'Current',
-        summary: 'Forecasted stock movements using NLP on news headlines and LSTM for time series forecasting.',
+        name: 'UIWiz - AI Native UI Development Platform',
+        startDate: 'January 2026',
+        endDate: 'Present',
+        link: 'https://www.uiwiz.live/',
+        summary: 'Architected an AI-native engine using Google Gemini API that converts natural language and image prompts into production-ready React + Tailwind code, reducing UI prototyping time by 80%.',
         highlights: [
-            'Scraped news using BeautifulSoup and Scrapy',
-            'Performed sentiment analysis using NLTK',
-            'Implemented LSTM forecasting with scikit-learn',
-            'Managed data with MySQL'
+            'Implemented Server-Sent Events (SSE) to stream code updates in real-time, providing an interactive "magic-typing" experience.',
+            'Engineered a backend failover mechanism switching across Gemini 2.0 Flash/Pro models upon rate limits, ensuring 100% availability.',
+            'Built a dynamic, in-browser execution environment using Sandpack for live multi-file project parsing and npm dependency resolution.',
+            'Designed a secure "bring-your-own-key" architecture with AES-256 encryption at the database level to protect user privacy.',
+            'Enabled image-to-code capabilities, reconciling design screenshots into responsive, accessible React components with high visual fidelity.',
+            'Developed a conversational state engine for progressive UI refinement through iterative prompting, maintaining full code context.'
         ],
-        tech: ['Python', 'NLTK', 'scikit-learn', 'MySQL'],
-        ascii: `
-   _____ __             __  
-  / ___// /_____  _____/ /__
-  \\__ \\/ __/ __ \\/ ___/ //_/
- ___/ / /_/ /_/ / /__/ ,<   
-/____/\\__/\\____/\\___/_/|_|  `
+        tech: ['TypeScript', 'Django', 'PostgreSQL', 'Gemini API', 'Firebase', 'Sandpack']
     },
     {
-        name: 'Ticket Raising Application',
-        startDate: 'May 2021',
-        endDate: 'Current',
-        summary: 'Developed Django-based ticketing backend with PostgreSQL, role-based authentication, and ticket tracking APIs.',
+        name: 'PortfolioMaker – AI-Powered Portfolio Generator',
+        startDate: 'December 2025',
+        endDate: 'January 2026',
+        link: 'https://portfolio-maker-git-main-electrogeeks-projects.vercel.app/',
+        summary: 'Developed an AI-driven web application that converts PDF resumes into deployment-ready portfolio websites with 95%+ structured data extraction accuracy.',
         highlights: [
-            'Used Django REST Framework for API creation',
-            'Implemented filtering/search by ticket status and priority',
-            'Built secure authentication system'
+            'Engineered an intelligent resume parsing pipeline using Google Gemini for contextual data extraction and field mapping.',
+            'Integrated AI-generated content for missing sections such as bios and project descriptions to enhance profile completeness.',
+            'Designed three responsive portfolio templates (Terminal, Renaissance, Newspaper) with distinct visual aesthetics.',
+            'Built a full-stack workflow including PDF text extraction (pypdf), Django ORM persistence, and secure ZIP export.',
+            'Integrated Firebase Authentication with secure user profiles and production-ready deployment with automated PostgreSQL migrations.'
         ],
-        tech: ['Django', 'PostgreSQL', 'REST API'],
-        ascii: `
-  _____ _      __        __ 
- /_  __(_)____/ /_____  / /_
-  / / / / ___/ //_/ _ \\/ __/
- / / / / /__/ ,< /  __/ /_  
-/_/ /_/\\___/_/|_|\\___/\\__/  `
-    },
-    {
-        name: 'AI-Powered Medical Appointment Scheduler',
-        startDate: 'Dec 2024',
-        endDate: 'Feb 2025',
-        summary: 'Built a full-stack appointment scheduling system using Google Gemini AI, FastAPI, and React with intelligent conversation handling.',
-        highlights: [
-            'Implemented a Retrieval-Augmented Generation (RAG) pipeline with ChromaDB to answer patient FAQs on clinic info, insurance, and policies',
-            'Developed a conversational AI agent capable of handling complex booking workflows including NLP-based appointment type classification',
-            'Designed and deployed RESTful APIs for calendar integration, conflict prevention, and working-hours management',
-            'Created a React chat interface with real-time interaction and context-aware conversation state management',
-            'Leveraged modern Python tools (FastAPI, Pydantic, Uvicorn) and embedding-based semantic search to enhance user experience',
-            'Delivered a production-ready, AI-driven solution that streamlines medical appointment scheduling through natural language conversation'
-        ],
-        tech: ['FastAPI', 'React', 'Gemini AI', 'ChromaDB', 'RAG'],
-        ascii: `
-   ___   ____   _____ __         ____           __
-  /   | /  _/  / ___// /_  ___  / __ \\___  ____/ /
- / /| | / /    \\__ \\/ __ \\/ _ \\/ / / / _ \\/ __  / 
-/ ___ |_/ /    ___/ / / / /  __/ /_/ /  __/ /_/ /  
-/_/  |_/___/  /____/_/ /_/\\___/_____/\\___/\\__,_/   `
+        tech: ['Django', 'Google Gemini API', 'PostgreSQL', 'Firebase', 'pypdf']
     }
 ];
 
+
 const Projects = () => {
     return (
-        <section className="projects-section terminal-window slide-in-up">
+        <section className="projects-section terminal-window">
             <div className="terminal-header">
                 <div className="terminal-buttons">
                     <div className="terminal-button close"></div>
                     <div className="terminal-button minimize"></div>
                     <div className="terminal-button maximize"></div>
                 </div>
-                <div className="terminal-title">projects.md</div>
+                <div className="terminal-title">flagship_projects.json</div>
             </div>
 
             <div className="terminal-content">
-                <div className="command-line">
-                    <span className="prompt">mritunjay@portfolio</span>
-                    <span className="text-white">$</span>
-                    <span className="command"> cat ~/projects/README.md</span>
-                </div>
-
-                <div className="projects-output">
-                    <div className="markdown-header">
-                        <span className="text-cyan">#</span>
-                        <span className="text-white"> Featured Projects</span>
-                    </div>
-
-                    {/* Projects ASCII Art Banner */}
-                    <div className="projects-banner">
-                        <div className="ascii-art-small text-orange">
-                            {`
-  ██████  ██████   ██████       ██ ███████  ██████ ████████ ███████ 
-  ██   ██ ██   ██ ██    ██      ██ ██      ██         ██    ██      
-  ██████  ██████  ██    ██      ██ █████   ██         ██    ███████ 
-  ██      ██   ██ ██    ██ ██   ██ ██      ██         ██         ██ 
-  ██      ██   ██  ██████   █████  ███████  ██████    ██    ███████ 
-`}
-                        </div>
-                    </div>
-
+                <div className="section-title">Featured Projects</div>
+                <div className="projects-grid">
                     {projectsData.map((project, index) => (
-                        <div
+                        <a
                             key={index}
-                            className="project-block"
-                            style={{ animationDelay: `${0.5 + index * 0.2}s` }}
+                            href={project.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="project-card clickable"
                         >
-                            {/* Project ASCII Art */}
-                            <div className="project-ascii">
-                                <div className="ascii-art-small text-yellow">
-                                    {project.ascii}
+                            <div className="project-header-top">
+                                <div className="project-name">
+                                    <h3>{project.name}</h3>
+                                    <div className="project-tags">
+                                        {project.tech.map((t, idx) => (
+                                            <span key={idx} className="project-tag">{t}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="project-date">
+                                    {project.startDate} — {project.endDate}
                                 </div>
                             </div>
 
-                            <div className="project-header">
-                                <span className="text-cyan">##</span>
-                                <span className="text-yellow"> {project.name}</span>
-                            </div>
-
-                            <div className="project-meta">
-                                <span className="text-gray">**Timeline:** </span>
-                                <span className="text-white">{project.startDate} → {project.endDate}</span>
-                                {project.endDate === 'Current' && <span className="pulse-dot" style={{ marginLeft: '10px' }}></span>}
-                            </div>
-
                             <div className="project-summary">
-                                <span className="text-white">{project.summary}</span>
-                            </div>
-
-                            <div className="project-tech">
-                                <span className="text-gray">**Tech Stack:** </span>
-                                {project.tech.map((tech, idx) => (
-                                    <span
-                                        key={idx}
-                                        className="terminal-tag"
-                                        style={{ animationDelay: `${0.6 + index * 0.2 + idx * 0.05}s` }}
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
+                                {project.summary}
                             </div>
 
                             <div className="project-highlights">
-                                <div className="text-gray">**Key Achievements:**</div>
+                                <h4>Technical Architecture & Impact</h4>
                                 {project.highlights.map((highlight, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="project-highlight-line"
-                                        style={{ animationDelay: `${0.7 + index * 0.2 + idx * 0.05}s` }}
-                                    >
-                                        <span className="text-green">•</span>
-                                        <span className="text-white"> {highlight}</span>
+                                    <div key={idx} className="highlight-point">
+                                        {highlight}
                                     </div>
                                 ))}
                             </div>
 
-                            {index < projectsData.length - 1 && (
-                                <div className="project-divider">
-                                    <span className="text-gray">{'─'.repeat(80)}</span>
-                                </div>
-                            )}
-                        </div>
+                            <div className="click-indicator" style={{
+                                marginTop: '1.5rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                color: 'var(--accent-primary)',
+                                fontSize: '0.8rem',
+                                fontWeight: '600'
+                            }}>
+                                <span>LAUNCH PLATFORM</span>
+                                <span style={{ transition: 'transform 0.3s ease' }}>→</span>
+                            </div>
+                        </a>
                     ))}
-                </div>
-
-                <div className="projects-footer">
-                    <span className="text-gray">// End of projects.md</span>
                 </div>
             </div>
         </section>
