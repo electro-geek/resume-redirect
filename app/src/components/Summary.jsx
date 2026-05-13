@@ -18,7 +18,7 @@ const Summary = () => {
                 <div className="summary-grid">
                     <div className="summary-text">
                         <p>
-                            Backend Engineer with over <span className="highlight-emerald">2 years</span> of experience specialized in building
+                            Backend Engineer with over <span className="highlight-emerald">3 years</span> of experience specialized in building
                             <span className="highlight-cyan"> scalable distributed systems</span> and high-performance real-time applications.
                             My focus lies at the intersection of robust architectural design and efficient data processing.
                         </p>

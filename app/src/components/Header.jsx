@@ -29,11 +29,11 @@ const Header = () => {
           </div>
           <div className="info-item">
             <span className="info-label">Experience</span>
-            <span className="info-value">1.5+ Years Exp.</span>
+            <span className="info-value">3+ Years Exp.</span>
           </div>
           <div className="info-item">
             <span className="info-label">Location</span>
-            <span className="info-value">Rajasthan, India</span>
+            <span className="info-value">Bengaluru, India</span>
           </div>
           <div className="info-item">
             <span className="info-label">Status</span>
