@@ -3,6 +3,53 @@ import './Projects.css';
 
 const projectsData = [
     {
+        name: 'Kompete - AI-Powered Competitive Intelligence Agent',
+        startDate: 'May 2026',
+        endDate: 'Present',
+        link: 'https://kompete.mritunjay.live',
+        summary: 'Built an autonomous AI agent that researches any company and generates boardroom-ready competitive intelligence reports with SWOT analysis in under 60 seconds.',
+        highlights: [
+            'Engineered a multi-agent research pipeline using Google Gemini 2.0 Flash with built-in Google Search, running four parallel async agents across news, financials, reviews, and social signals simultaneously.',
+            'Implemented Server-Sent Events (SSE) for real-time agent progress streaming, giving users live visibility into each research step as it completes.',
+            'Designed a structured JSON synthesis layer where a final Gemini call aggregates all research outputs into a validated SWOT analysis, financial snapshot, sentiment score, and strategic recommendations.',
+            'Built a decoupled architecture with a FastAPI async backend and a Next.js 14 frontend, communicating exclusively via REST API with full TypeScript type safety on the report schema.',
+            'Integrated server-side PDF generation via WeasyPrint, enabling one-click download of print-ready reports suitable for boardroom distribution.'
+        ],
+        tech: ['FastAPI', 'Next.js', 'Google Gemini API', 'Python', 'WeasyPrint']
+    },
+    {
+        name: 'PrepStudio - AI-Powered Learning & Interview Platform',
+        startDate: 'May 2026',
+        endDate: 'Present',
+        link: 'https://prepstudio.mritunjay.live',
+        summary: 'Developed a full-stack AI learning platform that transforms any topic into a structured study plan, generates rich educational content, conducts voice-based AI interviews, and helps users publish polished articles — all within a single personalized workspace.',
+        highlights: [
+            'Engineered a conversational plan generation pipeline using Google Gemini that takes a topic and deadline as input and outputs a structured day-by-day study curriculum with balanced workloads.',
+            'Built a lazy content generation system where full topic explanations are generated on first access via Gemini and permanently cached in PostgreSQL, eliminating redundant API calls on repeat visits.',
+            'Designed a voice interview engine using the browser-native Web Speech API for real-time speech-to-text transcription and TTS question delivery, with Gemini evaluating each answer for accuracy, depth, and clarity to produce a scored performance report.',
+            'Implemented an AI article refiner that converts a user\'s raw plain-text notes into publication-ready Markdown articles with proper structure, code blocks, and formatting — with a secondary Twitter thread export mode.',
+            'Integrated Firebase Authentication with JWT verification middleware on the FastAPI backend, ensuring all generated plans, topic content, articles, and interview results persist securely per user account.'
+        ],
+        tech: ['Next.js', 'FastAPI', 'Google Gemini API', 'PostgreSQL', 'Firebase']
+    },
+    {
+        name: 'SolShield AI — AI-Powered Solana Smart Contract Security Copilot',
+        startDate: 'May 2026',
+        endDate: 'Present',
+        link: 'https://solshield.mritunjay.live',
+        summary: 'Developed an AI-powered smart contract security auditing platform for the Solana ecosystem that detects vulnerabilities in Anchor/Rust programs and generates intelligent remediation guidance using LLM-powered security analysis.',
+        highlights: [
+            'Engineered a static analysis pipeline using Tree-sitter AST parsing to detect Solana-specific vulnerabilities including missing signer validation, PDA misuse, unsafe CPI patterns, and unchecked account ownership.',
+            'Built an AI-driven vulnerability explanation engine using Gemini AI to generate exploit scenarios, severity analysis, and secure remediation suggestions for insecure smart contract logic.',
+            'Designed a production-grade cybersecurity dashboard with Monaco-based code intelligence, real-time vulnerability highlighting, security scoring, and interactive audit workflows.',
+            'Implemented GitHub repository scanning and automated project ingestion pipelines for analyzing Anchor/Rust smart contract repositories directly from source control.',
+            'Developed a modular scanning engine with rule-based vulnerability detection architecture supporting scalable addition of custom Solana security rules and audit patterns.',
+            'Integrated PostgreSQL-backed persistence for scan history, vulnerability reports, AI-generated audit insights, and security analytics dashboards.',
+            'Optimized developer experience through responsive UI workflows, animated scan pipelines, streaming AI responses, and low-latency audit report generation.'
+        ],
+        tech: ['Next.js', 'FastAPI', 'Solana', 'Tree-sitter', 'Gemini AI', 'PostgreSQL', 'Monaco Editor']
+    },
+    {
         name: 'UIWiz - AI Native UI Development Platform',
         startDate: 'January 2026',
         endDate: 'Present',
